@@ -9,7 +9,7 @@ export default function CardOrganizer() {
   const toke = useState(sessionStorage.getItem("streamingToken"));
   
   useEffect(() => {
-     Filmes(mail, toke)
+    Filmes(mail, toke)
       .then((response) => {
         if(response.status === 200){
           let movies = response.data.data.movies
@@ -26,10 +26,9 @@ export default function CardOrganizer() {
     <div className="row row-cols-4">
       {
         filmList.map((film, indice) => {
-
           return (
             <div className="col" key={ indice }>
-              <FilmCard image={ film.thumbnail } titulo={ film.title } text={ film.description }/>
+              <FilmCard image={ film.thumbnail } titulo={ film.title } text={ film.description } filmeid={ film.id }/>
             </div>
           )
 

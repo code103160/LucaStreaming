@@ -11,10 +11,7 @@ export default function FilmCard(props) {
       <div className="card-body">
         <h5 className="card-title">{ props.titulo }</h5>
         <p className="card-text">{ props.text }</p>
-<<<<<<< HEAD
-        <button className="btn btn-primary" onClick={ () => navegar("/filme") }> Veja Trailer </button>
-=======
->>>>>>> parent of f2750a8 (Finalmente Navbar funcional)
+        <button className="btn btn-primary" onClick={ () => navegar(`/filme/${props.filmeid}`) }> Veja Trailer </button>
       </div>
     </div>
   )

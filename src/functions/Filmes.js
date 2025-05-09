@@ -5,7 +5,7 @@ export default function Filmes(mail, toke) {
     console.log(toke)
     return axios({
         method: "GET",
-        url: "http://200.100.0.10:80/api/v2/movies",
+        url: "http://200.100.0.11:80/api/v2/movies",
         params: {
             "data": {
                 "session":{

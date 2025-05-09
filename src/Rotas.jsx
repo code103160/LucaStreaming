@@ -13,7 +13,7 @@ export default function Rotas() {
                 <Route index path="/" element={ <Inicio/> } />
                 <Route path="/cadastro" element= { <Cadastro/> } />
                 <Route path="/busca" element={ <Busca/> } />
-                <Route path="/filme" element={ <FilmTrailer/> } />
+                <Route path="/filme/:id" element={ <FilmTrailer/> } />
             </Routes>
         </BrowserRouter>
     </div>
