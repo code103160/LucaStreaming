@@ -31,7 +31,7 @@ export default function FilmTrailer() {
       <div className="col-2 align-self-start h-100">
         <div className="card">
           <div className="card-body">
-            <p className="card-text">{ film.description }</p>
+            <p className="card-text">{ film.description } Ok eu vou deixar aqui esse pedaço de texto porque senão só fica o texto gerado pelo seed, e ai são descrições aleatórias não condizentes com o filme, mesmo que teóricamente fosse possivel pegar a sinopse de cada um e corrigir, isso daria trabalho demais, então vou deixar esse aviso para o povo que gosta de ler tudo, sinceramente porque ainda tão lendo isso, é mais para encher linguiça e mostrar a extensão do card mesmo, não deveriam estar prestando atenção na apresentação? Uau o victor acabou de escrever exterminador com S da para ver que nossa sanidade está no fim da picada com esse projeto, por favor nos salve</p>
           </div>
         </div>
       </div>

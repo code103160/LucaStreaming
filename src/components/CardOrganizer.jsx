@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import FilmCard from './FilmCard'
 import Filmes from '../functions/Filmes';
 import FilmCarrousel from './FilmCarrousel';
+import Carousel  from "react-bootstrap/Carousel";
 
 export default function CardOrganizer() {
 
@@ -25,18 +26,18 @@ export default function CardOrganizer() {
     
   return (
     <div>
-      <div className="container">
-        <div id="carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
-          <div className="carrousel-inner">
+      <div>
+        <Carousel>
             {
-              filmList.map((film, indice) => {
-                <div key={ indice }>
-                  <FilmCarrousel image={ film.thumbnail } filmeid={ film.id }/>
-                </div>
+              filmList.map((film, index) => {
+                return(
+                  <Carousel.Item key={ index }>
+                    <FilmCarrousel image={ film.thumbnail } filmeid={ film.id }/>
+                  </Carousel.Item>
+                )  
               })
             }
-          </div>
-        </div>
+        </Carousel>
       </div>
       <div className="row row-cols-4">
         {
