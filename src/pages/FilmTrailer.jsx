@@ -3,7 +3,7 @@ import Navegar from '../components/Navegar'
 import { useParams } from 'react-router'
 import FilmesId from '../functions/FilmesId';
 
-export default function FilmTrailer(props) {
+export default function FilmTrailer() {
 
   const email = useState(sessionStorage.getItem("streamingEmail"));
   const token = useState(sessionStorage.getItem("streamingToken"));
@@ -31,14 +31,14 @@ export default function FilmTrailer(props) {
       <div className="col-2 align-self-start h-100">
         <div className="card">
           <div className="card-body">
-            <p className="card-text">{ props.description } Lorem ipsum dolor sit amet mais texto isso vai ser pego dos cards isso seria maior precisa de mais informação?</p>
+            <p className="card-text">{ film.description }</p>
           </div>
         </div>
       </div>
       <div className="col">
         <div className="container d-flex justify-content-center mt-3" data-bs-theme="dark">
           <div className="card ratio ratio-16x9"> 
-            <iframe src = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" title="trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
+            <iframe src = { film.movie_url } title="trailer" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
           </div>
         </div>
       </div>

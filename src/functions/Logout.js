@@ -14,7 +14,7 @@ export default function Logout(mail, toke) {
     console.log(dados)
     return axios({
         method: "DELETE",
-        url: "http://200.100.0.11:80/api/v2/session/destroy",
+        url: "http://200.100.0.4:80/api/v2/session/destroy",
         params: dados
     })
 }
