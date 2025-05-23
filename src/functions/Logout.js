@@ -5,6 +5,10 @@ export default function Logout(mail, toke) {
         'data' : {
             'user' : {
                 'email':mail[0],
+                
+            },
+            
+            'session' : {
                 'access_token':toke[0]
             }
         }
